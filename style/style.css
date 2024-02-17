@@ -1,0 +1,158 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+:root {
+  --color-badge: #AFCEDD;
+  --color-text: #234894;
+  --color-btn: #219F95;
+  --color-span: #696969;
+  --color-white: #ffffff
+}
+
+/* Resets */
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 153.6rem;
+  margin: 0 auto;
+}
+
+.block{
+  padding: 5rem 3rem;
+}
+
+button {
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+span {
+  font-size: 1.2rem;
+  color: var(--color-span);
+}
+
+/* Components */
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Requests Section */
+
+.requests-wrapper {
+  display: grid;
+  grid-template:  auto / repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+
+/* Request */
+
+.request {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .2);
+}
+
+.request__badge {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-text);
+  background-color: var(--color-badge);
+  border-radius: 6px;
+  margin-left: 1rem;
+  padding: .6rem 1.5rem;
+}
+
+.request__header h4 {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.request__subject {
+  margin: 1.5rem 0;
+}
+
+.profile__img {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 4rem;
+  margin-left: 1rem;
+}
+
+.request__btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.request__btn-view {
+  background-color: var(--color-btn);
+  padding: 2rem 1.5rem;
+  color: var(--color-white);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Responsive Section (From desktop to mobile) */
+
+@media screen and (max-width: 1280px) {
+  .requests-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .request h3 {
+    font-size: 1.6rem;
+  }
+
+  .request h4, .request__btn-view {
+    font-size: 1.2rem;
+  }
+
+  .request__subject span, .request__date {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .requests-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+
+}
+
+
+
+
